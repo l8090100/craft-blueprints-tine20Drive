@@ -181,6 +181,7 @@ class Package(CMakePackageBase):
         return True
 
     def createPackage(self):
+        self.scriptname = 'tine20drive'
         self.blacklist_file.append(os.path.join(self.packageDir(), 'blacklist.txt'))
         self.defines["appname"] = self.applicationExecutable
         self.defines["apppath"] = "Applications/KDE/" + self.applicationExecutable + ".app"
